@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b0f17" />
+      <stop offset="100%" stop-color="#1b2340" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#4d7cfe" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="220" cy="160" r="220" fill="#4d7cfe" fill-opacity="0.12" />
+  <circle cx="980" cy="420" r="260" fill="#22c55e" fill-opacity="0.12" />
+  <rect x="120" y="140" width="960" height="350" rx="32" fill="rgba(255,255,255,0.06)" />
+  <text x="170" y="260" fill="#ffffff" font-size="64" font-family="Sora, Inter, sans-serif" font-weight="600">
+    Finly
+  </text>
+  <text x="170" y="320" fill="#c7d2fe" font-size="28" font-family="Inter, sans-serif">
+    Controle financeiro premium, elegante e inteligente.
+  </text>
+  <rect x="170" y="360" width="220" height="54" rx="27" fill="url(#accent)" />
+  <text x="190" y="395" fill="#0b0f17" font-size="20" font-family="Inter, sans-serif" font-weight="600">
+    Conheça a plataforma
+  </text>
+</svg>
