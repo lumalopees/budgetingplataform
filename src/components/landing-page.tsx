@@ -220,8 +220,6 @@ export default function LandingPage() {
                   />
                 </svg>
               )}
-              <span>{copy["toggles.themeLabel"]}</span>
-              <span className="toggle-value">{themeValue}</span>
             </button>
             <button
               className="toggle"
@@ -237,7 +235,6 @@ export default function LandingPage() {
                   strokeLinecap="round"
                 />
               </svg>
-              <span>{copy["toggles.langLabel"]}</span>
               <span className="toggle-value">{langValue}</span>
             </button>
           </div>
