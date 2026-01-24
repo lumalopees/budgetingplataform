@@ -194,6 +194,7 @@ export default function LandingPage() {
           <div className="brand" aria-label="Finly">
             Finly
           </div>
+          <p className="header-eyebrow">{copy["hero.eyebrow"]}</p>
           <div className="header-actions">
             <button
               className="toggle"
@@ -260,8 +261,7 @@ export default function LandingPage() {
               className="hero-copy"
               variants={stagger}
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.6 }}
+              animate="visible"
             >
               <motion.div variants={fadeUp}>
                 <span className="pill">
@@ -269,9 +269,6 @@ export default function LandingPage() {
                   {copy["hero.badgeText"]}
                 </span>
               </motion.div>
-              <motion.p className="eyebrow" variants={fadeUp}>
-                {copy["hero.eyebrow"]}
-              </motion.p>
               <motion.h1 variants={fadeUp}>{copy["hero.title"]}</motion.h1>
               <motion.p className="lead" variants={fadeUp}>
                 {copy["hero.subtitle"]}
@@ -300,22 +297,11 @@ export default function LandingPage() {
               className="hero-mockup"
               aria-hidden="true"
               initial={{ opacity: 0, y: reduceMotion ? 0 : 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               <div className="hero-media">
                 <div className="hero-video">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    poster="/hero-loop.svg"
-                    aria-hidden="true"
-                  >
-                    <source src="/hero-loop.mp4" type="video/mp4" />
-                  </video>
                   <img src="/hero-loop.svg" alt="" aria-hidden="true" />
                 </div>
                 <div className="hero-device">
@@ -337,7 +323,7 @@ export default function LandingPage() {
                   <div className="mockup-overlay">
                     <div className="mockup-card">
                       <p className="mockup-title">{copy["mockup.title"]}</p>
-                      <p className="mockup-value">R$ 3.420</p>
+                  <p className="mockup-value">{lang === "pt-BR" ? "R$ 3.420" : "$ 3,420"}</p>
                       <canvas ref={canvasRef} width={240} height={80} className="mockup-canvas" />
                       <div className="mockup-tags">
                         <span>{copy["mockup.tag1"]}</span>

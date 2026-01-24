@@ -159,6 +159,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
+  gap: 16px;
 }
 
 .brand {
@@ -171,6 +172,14 @@ main {
 .header-actions {
   display: flex;
   gap: 12px;
+}
+
+.header-eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .toggle {
@@ -203,13 +212,13 @@ main {
 }
 
 .hero {
-  padding: 88px 0 56px;
+  padding: 64px 0 56px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  align-items: center;
+  align-items: start;
   gap: 48px;
 }
 
@@ -301,7 +310,6 @@ main {
   box-shadow: var(--shadow);
 }
 
-.hero-video video,
 .hero-video img {
   width: 100%;
   height: 180px;
@@ -310,10 +318,9 @@ main {
 }
 
 .hero-video img {
-  position: absolute;
-  inset: 0;
-  opacity: 0.75;
-  mix-blend-mode: screen;
+  opacity: 1;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 18px 40px rgba(77, 124, 254, 0.25));
 }
 
 .hero-device {
@@ -744,6 +751,10 @@ main {
     gap: 12px;
   }
 
+  .header-eyebrow {
+    order: 2;
+  }
+
   .cta-row {
     flex-direction: column;
     align-items: flex-start;
@@ -753,7 +764,6 @@ main {
     order: -1;
   }
 
-  .hero-video video,
   .hero-video img {
     height: 140px;
   }
