@@ -348,24 +348,115 @@ export default function LandingPage() {
 
         <section className="trust">
           <div className="container trust-inner">
-            <p>{copy["trust.title"]}</p>
             <div className="trust-logos">
-              <span>Focus</span>
-              <span>Clarity</span>
-              <span>Habits</span>
-              <span>Goals</span>
-              <span>Insights</span>
+              <span>{copy["trust.logo1"]}</span>
+              <span>{copy["trust.logo2"]}</span>
+              <span>{copy["trust.logo3"]}</span>
+              <span>{copy["trust.logo4"]}</span>
+              <span>{copy["trust.logo5"]}</span>
             </div>
           </div>
         </section>
 
         <section className="section problem" id="demo">
           <div className="container">
-            <h2>{copy["problem.title"]}</h2>
-            <div className="problem-list">
-              <p>{copy["problem.item1"]}</p>
-              <p>{copy["problem.item2"]}</p>
-              <p>{copy["problem.item3"]}</p>
+            <div className="problem-grid">
+              <div className="problem-copy">
+                <span className="problem-kicker">{copy["problem.kicker"]}</span>
+                <h2>
+                  <span className="brand-mark">Fin</span>: {copy["problem.title"]}
+                </h2>
+                <div className="problem-list">
+                  <div className="problem-item">
+                    <span className="problem-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M4 7h16M4 12h12M4 17h8"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </span>
+                    <p>{copy["problem.item1"]}</p>
+                  </div>
+                  <div className="problem-item">
+                    <span className="problem-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M4 6h16v12H4z"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                        />
+                        <path
+                          d="M8 10h8M8 14h5"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </span>
+                    <p>{copy["problem.item2"]}</p>
+                  </div>
+                  <div className="problem-item">
+                    <span className="problem-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="m6 12 4 4 8-8"
+                          stroke="currentColor"
+                          strokeWidth="1.6"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
+                      </svg>
+                    </span>
+                    <p>{copy["problem.item3"]}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="problem-panel">
+                <h3>{copy["problem.panelTitle"]}</h3>
+                <div className="problem-panel-items">
+                  <div className="panel-item">
+                    <span className="panel-sign">-</span>
+                    <span>{copy["problem.panel1"]}</span>
+                  </div>
+                  <div className="panel-item">
+                    <span className="panel-sign">+</span>
+                    <span>{copy["problem.panel2"]}</span>
+                  </div>
+                  <div className="panel-item">
+                    <span className="panel-sign">+</span>
+                    <span>{copy["problem.panel3"]}</span>
+                  </div>
+                </div>
+                <div className="finance-mini">
+                  <div className="finance-row">
+                    <span>{copy["problem.finance.income"]}</span>
+                    <strong>{copy["problem.finance.incomeValue"]}</strong>
+                  </div>
+                  <div className="finance-row">
+                    <span>{copy["problem.finance.expenses"]}</span>
+                    <strong>{copy["problem.finance.expensesValue"]}</strong>
+                  </div>
+                  <div className="finance-row highlight">
+                    <span>{copy["problem.finance.balance"]}</span>
+                    <strong>{copy["problem.finance.balanceValue"]}</strong>
+                  </div>
+                  <svg viewBox="0 0 220 80" aria-hidden="true" className="finance-chart">
+                    <path
+                      d="M6 66L44 52L82 58L120 38L158 46L196 28"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <circle cx="196" cy="28" r="4" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </section>
