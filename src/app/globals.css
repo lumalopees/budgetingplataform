@@ -473,6 +473,10 @@ main {
   margin-bottom: 24px;
 }
 
+.features .container h2 {
+  text-align: left;
+}
+
 .problem-list {
   display: grid;
   gap: 12px;
@@ -703,6 +707,111 @@ main {
   color: var(--text-muted);
 }
 
+.how-grid {
+  display: grid;
+  gap: 28px;
+  justify-items: start;
+  text-align: left;
+}
+
+
+.how-steps {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+}
+
+.how-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.how-meta {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+
+.how-step h4 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.how-step p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.how-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(77, 124, 254, 0.12);
+  border: 1px solid rgba(77, 124, 254, 0.2);
+}
+
+.how-panel {
+  width: min(520px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--glow);
+  justify-self: center;
+}
+
+.how-panel h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.how-panel ul {
+  margin: 0 0 16px;
+  padding-left: 18px;
+  color: var(--text-muted);
+  display: grid;
+  gap: 8px;
+}
+
+.how-meter {
+  display: grid;
+  gap: 8px;
+}
+
+.how-meter span {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.meter-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-muted));
+  overflow: hidden;
+}
+
+.meter-fill {
+  display: block;
+  width: 78%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #22c55e);
+}
+
 .preview-grid {
   display: grid;
   gap: 28px;
@@ -912,5 +1021,9 @@ main {
   .mockup-overlay {
     gap: 10px;
     padding: 12px;
+  }
+
+  .how-steps {
+    grid-template-columns: 1fr;
   }
 }

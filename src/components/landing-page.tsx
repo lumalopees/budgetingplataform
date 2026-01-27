@@ -177,7 +177,14 @@ export default function LandingPage() {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path
-            d="M12 3a7 7 0 0 0 0 14c3.4 0 6.2-2.4 6.8-5.6A6 6 0 1 1 12 3Z"
+            d="M12 5c-2.8 0-5 2.2-5 5v3.2l-1.4 2.2h12.8l-1.4-2.2V10c0-2.8-2.2-5-5-5Z"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 17a2 2 0 0 0 4 0"
             stroke="currentColor"
             strokeWidth="1.6"
             strokeLinecap="round"
@@ -463,7 +470,7 @@ export default function LandingPage() {
 
         <section className="section features">
           <div className="container">
-            <h2>{copy["features.title"]}</h2>
+            <span className="problem-kicker">{copy["features.title"]}</span>
             <div className="grid features-grid">
               {featureItems.map((feature) => (
                 <article className="card" key={feature.title}>
@@ -478,7 +485,7 @@ export default function LandingPage() {
 
         <section className="section stats">
           <div className="container">
-            <h2>{copy["stats.title"]}</h2>
+            <span className="problem-kicker">{copy["stats.title"]}</span>
             <div className="grid stats-grid">
               <div className="stat">
                 <strong>{copy["stats.item1.value"]}</strong>
@@ -497,14 +504,60 @@ export default function LandingPage() {
         </section>
 
         <section className="section how-it-works">
-          <div className="container">
-            <h2>{copy["how.title"]}</h2>
-            <ol className="steps">
-              <li>{copy["how.step1"]}</li>
-              <li>{copy["how.step2"]}</li>
-              <li>{copy["how.step3"]}</li>
-              <li>{copy["how.step4"]}</li>
-            </ol>
+          <div className="container how-grid">
+            <span className="problem-kicker">{copy["how.title"]}</span>
+            <div className="how-steps">
+                <div className="how-step">
+                  <div className="how-meta">
+                    <span className="how-number">01</span>
+                  </div>
+                <div>
+                  <h4>{copy["how.step1"]}</h4>
+                  <p>{copy["how.step1.detail"]}</p>
+                </div>
+              </div>
+              <div className="how-step">
+                <div className="how-meta">
+                  <span className="how-number">02</span>
+                </div>
+                <div>
+                  <h4>{copy["how.step2"]}</h4>
+                  <p>{copy["how.step2.detail"]}</p>
+                </div>
+              </div>
+              <div className="how-step">
+                <div className="how-meta">
+                  <span className="how-number">03</span>
+                </div>
+                <div>
+                  <h4>{copy["how.step3"]}</h4>
+                  <p>{copy["how.step3.detail"]}</p>
+                </div>
+              </div>
+              <div className="how-step">
+                <div className="how-meta">
+                  <span className="how-number">04</span>
+                </div>
+                <div>
+                  <h4>{copy["how.step4"]}</h4>
+                  <p>{copy["how.step4.detail"]}</p>
+                </div>
+              </div>
+            </div>
+            <div className="how-panel">
+              <h3>{copy["how.panelTitle"]}</h3>
+              <ul>
+                <li>{copy["how.panel1"]}</li>
+                <li>{copy["how.panel2"]}</li>
+                <li>{copy["how.panel3"]}</li>
+              </ul>
+              <div className="how-meter">
+                <span>Clareza</span>
+                <div className="meter-bar">
+                  <span className="meter-fill" />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
