@@ -236,8 +236,9 @@ export default function LandingPage() {
               onClick={() => setLang(lang === "pt-BR" ? "en" : "pt-BR")}
             >
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
                 <path
-                  d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M5 7h14M5 17h14"
+                  d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M6 7h12M6 17h12"
                   stroke="currentColor"
                   strokeWidth="1.6"
                   strokeLinecap="round"
@@ -574,12 +575,34 @@ export default function LandingPage() {
             </div>
             <div className="preview-mockups" aria-hidden="true">
               <div className="screen light">
-                <p>{copy["preview.screen1"]}</p>
-                <span>R$ 8.240</span>
+                <div className="screen-header">
+                  <p>{copy["preview.screen1"]}</p>
+                  <span className="screen-pill">{copy["preview.screen1.delta"]}</span>
+                </div>
+                <div className="screen-value">{copy["preview.screen1.total"]}</div>
+                <div className="screen-metrics">
+                  <div>
+                    <small>{copy["preview.screen1.income"]}</small>
+                    <strong>{copy["preview.screen1.incomeValue"]}</strong>
+                  </div>
+                  <div>
+                    <small>{copy["preview.screen1.expenses"]}</small>
+                    <strong>{copy["preview.screen1.expensesValue"]}</strong>
+                  </div>
+                </div>
               </div>
               <div className="screen dark">
-                <p>{copy["preview.screen2"]}</p>
-                <span>3 em andamento</span>
+                <div className="screen-header">
+                  <p>{copy["preview.screen2"]}</p>
+                  <span className="screen-pill">{copy["preview.screen2.active"]}</span>
+                </div>
+                <div className="screen-value">{copy["preview.screen2.total"]}</div>
+                <div className="screen-progress">
+                  <div className="progress-bar">
+                    <span />
+                  </div>
+                  <small>{copy["preview.screen2.progress"]}</small>
+                </div>
               </div>
             </div>
           </div>
@@ -587,12 +610,14 @@ export default function LandingPage() {
 
         <section className="section benefits">
           <div className="container">
-            <h2>{copy["benefits.title"]}</h2>
+            <span className="problem-kicker">{copy["benefits.title"]}</span>
             <div className="grid benefits-grid">
               <div className="benefit">{copy["benefits.item1"]}</div>
               <div className="benefit">{copy["benefits.item2"]}</div>
               <div className="benefit">{copy["benefits.item3"]}</div>
               <div className="benefit">{copy["benefits.item4"]}</div>
+              <div className="benefit">{copy["benefits.item5"]}</div>
+              <div className="benefit">{copy["benefits.item6"]}</div>
             </div>
           </div>
         </section>
@@ -613,13 +638,17 @@ export default function LandingPage() {
                 <p>{copy["testimonials.item3.quote"]}</p>
                 <div className="author">{copy["testimonials.item3.name"]}</div>
               </div>
+              <div className="testimonial stack">
+                <p>{copy["testimonials.item4.quote"]}</p>
+                <div className="author">{copy["testimonials.item4.name"]}</div>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="section pricing">
           <div className="container">
-            <h2>{copy["pricing.title"]}</h2>
+            <span className="problem-kicker">{copy["pricing.title"]}</span>
             <div className="grid pricing-grid">
               <div className="price-card stack">
                 <h3>{copy["pricing.tier1"]}</h3>
