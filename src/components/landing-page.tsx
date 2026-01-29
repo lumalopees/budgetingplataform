@@ -192,6 +192,36 @@ export default function LandingPage() {
         </svg>
       ),
     },
+    {
+      title: "features.item7.title",
+      desc: "features.item7.desc",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 6h16M4 12h10M4 18h7"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+          <circle cx="18" cy="12" r="3" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
+      ),
+    },
+    {
+      title: "features.item8.title",
+      desc: "features.item8.desc",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 8h16M7 12h10M10 16h4"
+            stroke="currentColor"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+          />
+          <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
+      ),
+    },
   ];
 
   return (
