@@ -110,6 +110,8 @@ export const translations = {
     "benefits.item4": "Rotina financeira consistente sem esforço.",
     "benefits.item5": "Planejamento automático com ajustes rápidos.",
     "benefits.item6": "Relatórios simples para decisões seguras.",
+    "benefits.item7": "Comparação mensal para ver evolução real.",
+    "benefits.item8": "Foco nos objetivos sem perder flexibilidade.",
     "testimonials.title": "Avaliações",
     "testimonials.item1.quote":
       "É raro ver um produto financeiro tão claro e elegante. Tudo faz sentido.",
@@ -257,6 +259,8 @@ export const translations = {
     "benefits.item4": "A consistent money routine without effort.",
     "benefits.item5": "Automatic planning with quick adjustments.",
     "benefits.item6": "Simple reports for confident decisions.",
+    "benefits.item7": "Month-over-month comparison for real progress.",
+    "benefits.item8": "Goal focus without losing flexibility.",
     "testimonials.title": "Reviews",
     "testimonials.item1.quote":
       "It’s rare to see a finance product this clear and elegant. Everything just clicks.",

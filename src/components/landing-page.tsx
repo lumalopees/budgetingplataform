@@ -657,6 +657,8 @@ export default function LandingPage() {
               <div className="benefit">{copy["benefits.item4"]}</div>
               <div className="benefit">{copy["benefits.item5"]}</div>
               <div className="benefit">{copy["benefits.item6"]}</div>
+              <div className="benefit">{copy["benefits.item7"]}</div>
+              <div className="benefit">{copy["benefits.item8"]}</div>
             </div>
           </div>
         </section>
