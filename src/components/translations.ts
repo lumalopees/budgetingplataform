@@ -83,6 +83,9 @@ export const translations = {
     "how.panel1": "Conexão segura e instantânea",
     "how.panel2": "Automação com ajustes manuais",
     "how.panel3": "Insights acionáveis em minutos",
+    "how.panel4": "Categorias inteligentes com limites",
+    "how.panel5": "Relatórios semanais sem esforço",
+    "how.panel6": "Alertas antes de estourar o orçamento",
     "preview.title": "Dashboard pensado para o dia a dia",
     "preview.subtitle":
       "Tipografia forte, espaçamento generoso e contraste preciso para leitura rápida.",
@@ -227,6 +230,9 @@ export const translations = {
     "how.panel1": "Secure, instant connection",
     "how.panel2": "Automation with manual control",
     "how.panel3": "Actionable insights in minutes",
+    "how.panel4": "Smart categories with limits",
+    "how.panel5": "Weekly reports without effort",
+    "how.panel6": "Alerts before you overspend",
     "preview.title": "A dashboard designed for daily focus",
     "preview.subtitle":
       "Strong typography, generous spacing, and precise contrast for quick reading.",

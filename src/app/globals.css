@@ -145,6 +145,10 @@ main {
   color: var(--text);
 }
 
+.pill-mobile {
+  display: none;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -160,6 +164,13 @@ main {
   justify-content: space-between;
   padding: 16px 0;
   gap: 16px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -710,7 +721,8 @@ main {
 .how-grid {
   display: grid;
   gap: 28px;
-  justify-items: start;
+  grid-template-columns: minmax(380px, 1.3fr) minmax(340px, 600px);
+  align-items: start;
   text-align: left;
 }
 
@@ -719,7 +731,7 @@ main {
   width: 100%;
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .how-step {
@@ -764,31 +776,46 @@ main {
 }
 
 .how-panel {
-  width: min(520px, 100%);
+  width: 100%;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 20px;
+  padding: 24px;
   box-shadow: var(--glow);
-  justify-self: center;
+  justify-self: end;
+  align-self: center;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
 }
 
 .how-panel h3 {
-  margin-top: 0;
-  margin-bottom: 14px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .how-panel ul {
-  margin: 0 0 16px;
+  margin: 0;
+  width: 100%;
   padding-left: 18px;
   color: var(--text-muted);
   display: grid;
-  gap: 8px;
+  gap: 12px;
+  text-align: left;
+  flex: 1;
 }
 
 .how-meter {
   display: grid;
   gap: 8px;
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+  margin-top: auto;
 }
 
 .how-meter span {
@@ -810,6 +837,26 @@ main {
   width: 78%;
   height: 100%;
   background: linear-gradient(90deg, var(--accent), #22c55e);
+}
+
+/* How-it-works layout override */
+.how-grid {
+  grid-template-areas:
+    "kicker panel"
+    "steps panel";
+}
+
+.how-kicker {
+  grid-area: kicker;
+}
+
+.how-steps {
+  grid-area: steps;
+}
+
+.how-panel {
+  grid-area: panel;
+  align-self: center;
 }
 
 .preview-grid {
@@ -855,7 +902,13 @@ main {
   box-shadow: var(--shadow);
 }
 
-.screen.dark {
+.screen.dark[data-tone="contrast"] {
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .screen.dark[data-tone="contrast"] {
   background: #0b1020;
   color: #eef2ff;
   border-color: #1c2541;
@@ -1052,14 +1105,20 @@ main {
 }
 
 @media (max-width: 720px) {
+  .trust-logos {
+    gap: 16px;
+    font-size: 0.8rem;
+    padding: 0 12px;
+  }
   .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 12px;
   }
 
-  .header-eyebrow {
-    order: 2;
+  .header-actions {
+    margin-left: auto;
   }
 
   .cta-row {
@@ -1068,7 +1127,7 @@ main {
   }
 
   .hero-mockup {
-    order: -1;
+    order: 0;
   }
 
   .hero-video img {
@@ -1082,5 +1141,30 @@ main {
 
   .how-steps {
     grid-template-columns: 1fr;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "kicker"
+      "steps"
+      "panel";
+  }
+
+  .how-panel {
+    justify-self: stretch;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pill-desktop {
+    display: none;
+  }
+
+  .pill-mobile {
+    display: inline-flex;
+    margin-top: 12px;
   }
 }

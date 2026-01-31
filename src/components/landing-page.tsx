@@ -228,10 +228,12 @@ export default function LandingPage() {
     <>
       <header className="site-header">
         <div className="container header-inner">
-          <div className="brand" aria-label="Finly">
-            Finly
+          <div className="header-brand">
+            <div className="brand" aria-label="Finly">
+              Finly
+            </div>
+            <p className="header-eyebrow">{copy["hero.eyebrow"]}</p>
           </div>
-          <p className="header-eyebrow">{copy["hero.eyebrow"]}</p>
           <div className="header-actions">
             <button
               className="toggle"
@@ -302,7 +304,7 @@ export default function LandingPage() {
               animate="visible"
             >
               <motion.div variants={fadeUp}>
-                <span className="pill">
+                <span className="pill pill-desktop">
                   <span>{copy["hero.badge"]}</span>
                   {copy["hero.badgeText"]}
                 </span>
@@ -381,6 +383,10 @@ export default function LandingPage() {
                 </div>
               </div>
             </motion.div>
+            <div className="pill pill-mobile">
+              <span>{copy["hero.badge"]}</span>
+              {copy["hero.badgeText"]}
+            </div>
           </div>
         </section>
 
@@ -536,7 +542,7 @@ export default function LandingPage() {
 
         <section className="section how-it-works">
           <div className="container how-grid">
-            <span className="problem-kicker">{copy["how.title"]}</span>
+            <span className="problem-kicker how-kicker">{copy["how.title"]}</span>
             <div className="how-steps">
                 <div className="how-step">
                   <div className="how-meta">
@@ -576,11 +582,14 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="how-panel">
-              <h3>{copy["how.panelTitle"]}</h3>
+              <span className="problem-kicker">{copy["how.panelTitle"]}</span>
               <ul>
                 <li>{copy["how.panel1"]}</li>
                 <li>{copy["how.panel2"]}</li>
                 <li>{copy["how.panel3"]}</li>
+                <li>{copy["how.panel4"]}</li>
+                <li>{copy["how.panel5"]}</li>
+                <li>{copy["how.panel6"]}</li>
               </ul>
               <div className="how-meter">
                 <span>Clareza</span>
@@ -621,7 +630,7 @@ export default function LandingPage() {
                   </div>
                 </div>
               </div>
-              <div className="screen dark">
+              <div className="screen dark" data-tone="contrast">
                 <div className="screen-header">
                   <p>{copy["preview.screen2"]}</p>
                   <span className="screen-pill">{copy["preview.screen2.active"]}</span>
